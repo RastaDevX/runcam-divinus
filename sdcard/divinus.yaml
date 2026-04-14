@@ -1,0 +1,20 @@
+system:
+  sensor_config: /etc/sensors/imx335.bin
+
+mp4:
+  codec: H.265
+  mode: AVBR
+  width: 1024
+  height: 576
+  fps: 30
+  gop: 30
+  profile: HP
+  bitrate: 5600
+  maxBitrate: 6000
+  minQp: 20
+  maxQp: 42
+  statTime: 2
+
+stream:
+  protocol: UDP
+  port: 5600
