@@ -1,6 +1,6 @@
 #!/bin/sh
 set -e
-SD="/mnt/sdcard"
+SD="/mnt/mmcblk0p1"
 
 echo "[install] Remounting rootfs as rw..."
 mount -o remount,rw /
