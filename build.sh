@@ -35,7 +35,7 @@ build() {
     echo "[build] Building for target: $TARGET"
     cd "$DIVINUS_DIR"
     chmod +x build.sh
-    ./build.sh "$TARGET"
+    bash build.sh "$TARGET"
     cd ..
 
     echo "[build] Copying binary to $OUTPUT_DIR/"
@@ -51,8 +51,7 @@ clean() {
     echo "[build] Clean complete."
 }
 
-case "
-${1:-all}" in
+case "${1:-all}" in
     clone) clone ;;
     patch) clone && patch_sources ;;
     build) build ;;
