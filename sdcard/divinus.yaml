@@ -1,7 +1,14 @@
 system:
-  sensor_config: /etc/sensors/imx335.bin
+  sensor_config: /etc/sensors/imx335_fpv.bin
+  watchdog: 30
+
+isp:
+  mirror: false
+  flip: false
+  antiflicker: 60
 
 mp4:
+  enable: true
   codec: H.265
   mode: AVBR
   width: 1024
@@ -10,11 +17,14 @@ mp4:
   gop: 30
   profile: HP
   bitrate: 5600
-  maxBitrate: 6000
-  minQp: 20
-  maxQp: 42
-  statTime: 2
 
 stream:
-  protocol: UDP
-  port: 5600
+  enable: true
+  dest:
+    - udp://127.0.0.1:5600
+
+rtsp:
+  enable: false
+
+jpeg:
+  enable: false
