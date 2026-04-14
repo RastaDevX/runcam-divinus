@@ -5,8 +5,8 @@ CONF=/etc/divinus.yaml
 case "$1" in
   start)
     echo "Starting divinus..."
-    killall -9 majestic 2>/dev/null
-    $DAEMON -c $CONF &
+    cp $CONF /root/divinus.yaml
+    cd /root && $DAEMON &
     ;;
   stop)
     echo "Stopping divinus..."
