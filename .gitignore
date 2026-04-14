@@ -1,0 +1,6 @@
+# Build artifacts
+divinus-src/
+sdcard/divinus
+
+# macOS
+.DS_Store
